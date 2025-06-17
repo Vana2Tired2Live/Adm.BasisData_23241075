@@ -174,3 +174,11 @@ FROM tr_penjualan
 GROUP BY nama_produk
 ORDER BY total_penjualan DESC;
 
+
+-- Soal ACC
+-- Tampilkan total penjualan tertinggi pada bulan Mei dan Juni
+SELECT tgl_transaksi AS bulan, MAX(harga) AS penjualan_tertinggi
+FROM tr_penjualan
+WHERE MONTH(tgl_transaksi)
+GROUP BY MONTH(tgl_transaksi);
+
